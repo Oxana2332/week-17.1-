@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фамилия Имя Отчество</title>
+</head>
+<body>
+
+<label> Вас зовут:
+    <input type="text" id="F">
+    <input type="text" id="I">
+    <input type="text" id="O">
+</label>
+
+    <script>
+    "use strict";
+        let input = prompt('Введите фамилию, имя и отчество');
+        let inputClear = input.trim();
+        let inputLow = inputClear.toLowerCase();
+        let inputArr = inputLow.split(" ");
+        let F = inputArr[0];
+        let I = inputArr[1];
+        let O = inputArr[2];
+        document.querySelector("#F").value = F[0].toUpperCase() + F.substring(1);
+        document.querySelector("#I").value = I[0].toUpperCase() + I.substring(1);
+        document.querySelector("#O").value = O[0].toUpperCase() + O.substring(1);
+
+    </script>
+</body>
+</html>
